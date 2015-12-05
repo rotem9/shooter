@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class enemyMovment : MonoBehaviour {
+public class enemyMovment1 : MonoBehaviour {
 
-    private float startingPosition;
+	private float movementSpeed = 0.05f;
 
 	// Use this for initialization
 	void Start () {
-        startingPosition = transform.position.y;
+		transform.position = new Vector2 (5, -2);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		if (GirlBehavior.alive) {
-			transform.position = new Vector2 (transform.position.x - GameManager.alienXposition, GameManager.alienYPosition);
+			transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y + 0f);
 		}
 	}
 
