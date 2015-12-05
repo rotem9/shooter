@@ -7,7 +7,7 @@ public class enemyMovment1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		transform.position = new Vector2 (5, -2);
+		//transform.position = new Vector2 (5, -2);
 	}
 	
 	// Update is called once per frame
