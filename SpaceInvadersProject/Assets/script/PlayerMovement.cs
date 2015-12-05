@@ -22,6 +22,6 @@ public class PlayerMovement : MonoBehaviour {
 
     private void fire()
     {
-        Instantiate(bullet, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        Instantiate(bullet, new Vector2(transform.position.x + 1, transform.position.y), Quaternion.identity);
     }
 }

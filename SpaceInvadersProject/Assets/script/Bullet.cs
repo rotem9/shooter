@@ -6,16 +6,15 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		 blah = GetComponent <Rigidbody2D> ();
+		blah = GetComponent <Rigidbody2D> ();
+		Vector3 sp = Camera.main.WorldToScreenPoint (transform.position);
+		Vector3 dir = (Input.mousePosition - sp).normalized;
+		blah.AddForce (dir * 300);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //transform.position = new Vector2(transform.position.x + 0.2f, transform.position.y);
-
-		Vector3 sp = Camera.main.WorldToScreenPoint (transform.position);
-		Vector3 dir = (Input.mousePosition - sp).normalized;
-		blah.AddForce (dir * 50);
 
         if(transform.position.x > 4 || transform.position.y < -3.5 || transform.position.y > 3.5 || transform.position.x < -4.7)
         {
