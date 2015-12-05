@@ -13,16 +13,9 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetMouseButtonUp(0))
         {
-            transform.position = new Vector2(transform.position.x + movementSpeed, transform.position.y);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position = new Vector2(transform.position.x - movementSpeed, transform.position.y);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+            // insert throwing animation
             fire();
         }
     }

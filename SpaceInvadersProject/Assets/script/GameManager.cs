@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour {
 
     public static int score = 0;
 
-    public static float movementDirection = 1;
-    private float movementSpeed = 0.2f;
+    private float movementSpeed = 0.05f;
     public static float alienXposition;
 
     public static float alienYPosition;
@@ -22,31 +21,15 @@ public class GameManager : MonoBehaviour {
     private List<GameObject> alienInvasion = new List<GameObject>();
 
     // Use this for initialization
-    void Start () {
-        for(int i = 0; i < 6; i++)
-        {
-            for(int j = 0; j < 4; j++)
-            {
-                if (i == 0 || i == 3)
-                {
-                    alienInvasion.Add(Instantiate(alien1, new Vector2(-7 + i*1.2f, j * 1.2f), Quaternion.identity) as GameObject);
-                }
-                if (i == 1 || i == 4)
-                {
-                    alienInvasion.Add(Instantiate(alien2, new Vector2(-7 + i * 1.2f, j * 1.2f), Quaternion.identity) as GameObject);
-                }
-                else
-                {
-                    alienInvasion.Add(Instantiate(alien3, new Vector2(-7 + i * 1.2f, j * 1.2f), Quaternion.identity) as GameObject);
-                }
-            }
-        }
-
+	void Start () {
+        alienInvasion.Add(Instantiate(alien1, new Vector2(6,5), Quaternion.identity) as GameObject);
+        alienInvasion.Add(Instantiate(alien2, new Vector2(6,5), Quaternion.identity) as GameObject);
+        alienInvasion.Add(Instantiate(alien3, new Vector2(7,5), Quaternion.identity) as GameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        alienXposition = movementSpeed * movementDirection;
+        alienXposition = movementSpeed;
 
         textScore.text = "score: " + score;
     }
