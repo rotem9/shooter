@@ -4,6 +4,8 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 	private Rigidbody2D blah;
 
+	public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 		blah = GetComponent <Rigidbody2D> ();
@@ -26,7 +28,9 @@ public class Bullet : MonoBehaviour {
     {
         if(objectCollision.gameObject.tag == "enemy")
         {
+			Instantiate (explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
+	
 }
