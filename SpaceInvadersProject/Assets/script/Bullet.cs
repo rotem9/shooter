@@ -5,13 +5,14 @@ public class Bullet : MonoBehaviour {
 	private Rigidbody2D blah;
 
 	public GameObject explosion;
+	public int power;
 
 	// Use this for initialization
 	void Start () {
 		blah = GetComponent <Rigidbody2D> ();
 		Vector3 sp = Camera.main.WorldToScreenPoint (transform.position);
 		Vector3 dir = (Input.mousePosition - sp).normalized;
-		blah.AddForce (dir * 300);
+		blah.AddForce (dir * power);
 	}
 	
 	// Update is called once per frame
@@ -28,8 +29,9 @@ public class Bullet : MonoBehaviour {
     {
         if(objectCollision.gameObject.tag == "enemy")
         {
-			Instantiate (explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+			Destroy(gameObject);
+			//Instantiate (explosion, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
         }
     }
 	
