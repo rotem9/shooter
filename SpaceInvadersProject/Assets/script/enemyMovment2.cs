@@ -3,7 +3,7 @@ using System.Collections;
 
 public class enemyMovment2 : MonoBehaviour {
 
-	private float movementSpeed = 0.05f;
+	private float movementSpeed = 0.035f;
 
 	// Use this for initialization
 	void Start () {

@@ -48,7 +48,9 @@
      <Compile Include="Assets\script\Bullet.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
      <Compile Include="Assets\script\GirlBehavior.cs" />
+     <Compile Include="Assets\script\Level2.cs" />
      <Compile Include="Assets\script\PlayerMovement.cs" />
+     <Compile Include="Assets\script\PowerBar.cs" />
      <Compile Include="Assets\script\StartMenu.cs" />
      <Compile Include="Assets\script\enemyMovment1.cs" />
      <Compile Include="Assets\script\enemyMovment2.cs" />
