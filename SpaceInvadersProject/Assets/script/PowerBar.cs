@@ -11,7 +11,8 @@ public class PowerBar : MonoBehaviour
 	public Vector2 size = new Vector2(20, 60);
 	public float speed = 10f;
 	public static float barDisplay = 0;
-	public static bool PowerBarOn = false;   
+	public static bool PowerBarOn = false;  
+	private float mousePosy;
 	
 	// Use this for initialization
 	void Start()
@@ -23,7 +24,8 @@ public class PowerBar : MonoBehaviour
 		if (PowerBarOn)
 		{
 			// draw the background:
-			GUI.BeginGroup(new Rect(Input.mousePosition.x, Input.mousePosition.y, size.x, size.y));
+			mousePosy = Screen.height - Input.mousePosition.y;
+			GUI.BeginGroup(new Rect(Input.mousePosition.x - 25, mousePosy - 70, size.x, size.y));
 			GUI.Box(new Rect(0, 0, size.x, size.y), progressBarEmpty);
 			
 			// draw the filled-in part:
