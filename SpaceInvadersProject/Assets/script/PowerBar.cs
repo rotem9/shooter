@@ -25,10 +25,14 @@ public class PowerBar : MonoBehaviour
 		{
 			// draw the background:
 			mousePosy = Screen.height - Input.mousePosition.y;
+			GUI.backgroundColor = Color.white;
+			GUI.backgroundColor = Color.white;
 			GUI.BeginGroup(new Rect(Input.mousePosition.x - 25, mousePosy - 70, size.x, size.y));
 			GUI.Box(new Rect(0, 0, size.x, size.y), progressBarEmpty);
 			
 			// draw the filled-in part:
+			GUI.contentColor = Color.white;
+			GUI.contentColor = Color.white;
 			GUI.BeginGroup(new Rect(0, (size.y - (size.y * barDisplay)), size.x, size.y * barDisplay));
 			GUI.Box(new Rect(0, -size.y + (size.y * barDisplay), size.x, size.y), progressBarFull);
 			GUI.EndGroup();
@@ -41,7 +45,7 @@ public class PowerBar : MonoBehaviour
 	{
 		if (PowerBarOn)
 		{
-			barDisplay += speed * Time.deltaTime;
+			barDisplay += 4 * (speed * Time.deltaTime) ;
 			Bullet.power = (int) (barDisplay / Time.deltaTime) * 8;
 			
 			if (barDisplay >= 1.0f)
