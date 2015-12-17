@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     public Text textScore;
 
     public static int score = 0;
-
+	public static float counter = 4.0f;
     // Use this for initialization
 	void Start () {
 		StartCoroutine (monsters());
@@ -27,30 +27,13 @@ public class GameManager : MonoBehaviour {
 
 	IEnumerator monsters() {
 		//yield return new WaitForSeconds (startWait);
+		for (int i = 0; i < 10; i++) {
+			counter -= 0.2f;
+			Vector2 pos1 = new Vector2 (6.31f, -2.786f);
+			Instantiate (alien1, pos1, Quaternion.identity);
+			yield return new WaitForSeconds (counter);
+		}
 
-		Vector2 pos1 = new Vector2 (6, -1);
-		Instantiate (alien1, pos1, Quaternion.identity);
-		yield return new WaitForSeconds (3f);
-
-		Vector2 pos2 = new Vector2 (6, -2);
-		Instantiate (alien1, pos2, Quaternion.identity);
-		yield return new WaitForSeconds (2.75f);
-
-		Vector2 pos3 = new Vector2 (6, -3);
-		Instantiate (alien1, pos3, Quaternion.identity);
-		yield return new WaitForSeconds (2.8f);
-
-		Vector2 pos4 = new Vector2 (6, -2.5f);
-		Instantiate (alien1, pos4, Quaternion.identity);
-		yield return new WaitForSeconds (3.2f);
-
-		Vector2 pos5 = new Vector2 (6, -2);
-		Instantiate (alien1, pos5, Quaternion.identity);
-		yield return new WaitForSeconds (2.3f);
-
-		Vector2 pos6 = new Vector2 (6, -3);
-		Instantiate (alien1, pos6, Quaternion.identity);
-		yield return new WaitForSeconds (2f);
 
 			//Vector2 pos2 = new Vector2 (6, 2);
 			//Instantiate (alien2, pos2, Quaternion.identity);
