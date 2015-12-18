@@ -3,7 +3,8 @@ using System.Collections;
 
 public class enemyMovment2 : MonoBehaviour {
 
-	private float movementSpeed = 0.035f;
+	public float movementSpeed = 0.035f;
+	public GameObject explotion;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class enemyMovment2 : MonoBehaviour {
 	{
 		if (objectCollision.gameObject.tag == "bullet") {
 			GameManager.score++;
+			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		} else if (objectCollision.gameObject.tag == "girl") {
 			Destroy (gameObject);
