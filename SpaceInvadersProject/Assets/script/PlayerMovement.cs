@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+
+		if ((PowerUp1.clicked == false) && Input.GetKeyDown(KeyCode.Mouse0)) {
 			PowerBar.PowerBarOn = true;
 		}
 		
-		if (Input.GetMouseButtonUp(0))
+		if (Input.GetMouseButtonUp(0) && (PowerUp1.clicked == false))
 		{
 			// insert throwing animation
 			fire();
