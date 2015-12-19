@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject bullet;
 	public float movementSpeed = 0.1f;
 	public GameObject powerBar;
+	public static float currPower;
 	
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			// insert throwing animation
 			fire();
+			currPower = PowerBar.barDisplay;
 			PowerBar.PowerBarOn = false;
 		}
 	}

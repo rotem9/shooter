@@ -13,6 +13,7 @@ public class enemyMovment1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (AtomicBear.hit == true) {
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);

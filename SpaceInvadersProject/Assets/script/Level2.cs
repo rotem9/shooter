@@ -30,7 +30,7 @@ public class Level2 : MonoBehaviour
 	{
 		//yield return new WaitForSeconds (startWait);
 
-		Vector2 pos1 = new Vector2 (6, -1);
+		Vector2 pos1 = new Vector2 (6, -2.5f);
 		Instantiate (alien1, pos1, Quaternion.identity);
 		yield return new WaitForSeconds (4f);
 		
@@ -50,11 +50,11 @@ public class Level2 : MonoBehaviour
 		Instantiate (alien2, pos5, Quaternion.identity);
 		yield return new WaitForSeconds (2.3f);
 		
-		Vector2 pos6 = new Vector2 (6, -1);
+		Vector2 pos6 = new Vector2 (6, -2.5f);
 		Instantiate (alien1, pos6, Quaternion.identity);
 		yield return new WaitForSeconds (2.8f);
 
-		Vector2 pos7 = new Vector2 (6, -2);
+		Vector2 pos7 = new Vector2 (6, -2.5f);
 		Instantiate (alien1, pos7, Quaternion.identity);
 		yield return new WaitForSeconds (2.3f);
 		
