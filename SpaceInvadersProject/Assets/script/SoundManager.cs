@@ -51,7 +51,7 @@ public class SoundManager : MonoBehaviour {
 		}
 
 		if (PowerUp1.playatomicbear) {
-			sourceAudio.PlayOneShot(atomicbear, 0.2f);
+			sourceAudio.PlayOneShot(atomicbear, 1f);
 			PowerUp1.playatomicbear = false;
 		}
 

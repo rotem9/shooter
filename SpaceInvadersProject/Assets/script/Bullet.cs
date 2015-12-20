@@ -1,16 +1,17 @@
 using UnityEngine;
 using System.Collections;
 
-public class Bullet : MonoBehaviour {
+public class Bullet : MonoBehaviour
+{
 	private Rigidbody2D blah;
-	
 	public GameObject explosion;
 	public static int power;
 	public static bool playhitmonster;
 	public static TrailRenderer powerTrail;
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		powerTrail = GetComponent <TrailRenderer> ();
 		powerTrail.enabled = false;
 
@@ -21,7 +22,8 @@ public class Bullet : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		//transform.position = new Vector2(transform.position.x + 0.2f, transform.position.y);
 		if (PlayerMovement.fired) {
 			Bullet.powerTrail.enabled = false;
@@ -31,18 +33,17 @@ public class Bullet : MonoBehaviour {
 			Bullet.powerTrail.enabled = true;
 		}
 
-		if(transform.position.x > 5 || transform.position.y < -3.5 || transform.position.y > 3.5 || transform.position.x < -4.7)
-		{
-			Destroy(gameObject);
+		if (transform.position.x > 5 || transform.position.y < -3.5 || transform.position.y > 3.5 || transform.position.x < -4.7) {
+			Destroy (gameObject);
 		}
 	}
 	
-	void OnCollisionEnter2D(Collision2D objectCollision)
+	void OnCollisionEnter2D (Collision2D objectCollision)
 	{
-		if(objectCollision.gameObject.tag == "enemy")
-		{
+		if (objectCollision.gameObject.tag == "enemy") {
 			playhitmonster = true;
-			Destroy(gameObject);
+			if (PowerUp2.clicked == false)
+				Destroy (gameObject);
 			//Instantiate (explosion, transform.position, Quaternion.identity);
 			//Destroy(gameObject);
 		}
