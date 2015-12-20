@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Audio;
+
 
 public class enemyMovment1 : MonoBehaviour {
 
@@ -17,11 +17,15 @@ public class enemyMovment1 : MonoBehaviour {
 
 		if (AtomicBear.hit == true) {
 			playenemy1dies = true;
-			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		}
-		if (GirlBehavior.alive) { 
-			transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y + 0f);
+		if (GirlBehavior.alive) {
+			if (transform.position.x >= 4.6) {
+				transform.position = new Vector2 (transform.position.x - movementSpeed, -2.67f);
+			} else {
+				transform.position = new Vector2 (transform.position.x - movementSpeed, -2.786f);
+			}
 		}
 	}
 

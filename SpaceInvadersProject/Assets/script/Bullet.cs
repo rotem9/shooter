@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour {
 			Bullet.powerTrail.enabled = true;
 		}
 
-		if(transform.position.x > 4 || transform.position.y < -3.5 || transform.position.y > 3.5 || transform.position.x < -4.7)
+		if(transform.position.x > 5 || transform.position.y < -3.5 || transform.position.y > 3.5 || transform.position.x < -4.7)
 		{
 			Destroy(gameObject);
 		}
