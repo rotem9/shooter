@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\Bullet.cs">
+    <Files>
+      <File FileName="Assets\script\SoundManager.cs" Line="45" Column="37" />
+      <File FileName="Assets\script\enemyMovment1.cs" Line="25" Column="83" />
+      <File FileName="Assets\script\PowerUp1.cs" Line="13" Column="2" />
+      <File FileName="Assets\script\GameManager.cs" Line="33" Column="46" />
+      <File FileName="Assets\script\Bullet.cs" Line="31" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
