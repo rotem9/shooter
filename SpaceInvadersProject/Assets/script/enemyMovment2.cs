@@ -38,7 +38,6 @@ public class enemyMovment2 : MonoBehaviour {
 		}
 
 		if (hitCounter == 2) {
-			sourceAudio.PlayOneShot(enemy2dies, 1f);
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		}
