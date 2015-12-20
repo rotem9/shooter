@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\..\shooter\SpaceInvadersProject\Assets\script\Bullet.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/PowerBar.cs">
     <Files>
-      <File FileName="..\..\..\..\..\..\shooter\SpaceInvadersProject\Assets\script\SoundManager.cs" Line="45" Column="37" />
-      <File FileName="..\..\..\..\..\..\shooter\SpaceInvadersProject\Assets\script\enemyMovment1.cs" Line="25" Column="83" />
-      <File FileName="..\..\..\..\..\..\shooter\SpaceInvadersProject\Assets\script\PowerUp1.cs" Line="13" Column="2" />
-      <File FileName="..\..\..\..\..\..\shooter\SpaceInvadersProject\Assets\script\GameManager.cs" Line="33" Column="46" />
-      <File FileName="..\..\..\..\..\..\shooter\SpaceInvadersProject\Assets\script\Bullet.cs" Line="31" Column="4" />
+      <File FileName="Assets/script/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/enemyMovment1.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/enemyMovment2.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/Level2.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/PowerBar.cs" Line="51" Column="27" />
+      <File FileName="Assets/script/Bullet.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
