@@ -8,11 +8,10 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject powerBar;
 	public static float currPower;
 	public static bool playthrow;
-	public static bool fired;
 	
 	// Use this for initialization
 	void Start () {
-		fired = false;
+		
 	}
 	
 	// Update is called once per frame
@@ -29,13 +28,11 @@ public class PlayerMovement : MonoBehaviour {
 			fire();
 			currPower = PowerBar.barDisplay;
 			PowerBar.PowerBarOn = false;
-			fired = false;
 		}
 	}
 	
 	private void fire()
 	{
 		Instantiate(bullet, new Vector2(transform.position.x + 1, transform.position.y), Quaternion.identity);
-		fired = true;
 	}
 }

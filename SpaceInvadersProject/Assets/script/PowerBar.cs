@@ -67,12 +67,8 @@ public class PowerBar : MonoBehaviour
 	{
 		if (PowerBarOn)
 		{
-			barDisplay += 5f * (speed * Time.deltaTime) ;
-			if (barDisplay >= 0.95f) {
-				Bullet.power = (int) (barDisplay / Time.deltaTime) * 11;
-			} else {
-				Bullet.power = (int) (barDisplay / Time.deltaTime) * 8;
-			}
+			barDisplay += 4 * (speed * Time.deltaTime) ;
+			Bullet.power = (int) (barDisplay / Time.deltaTime) * 8;
 			
 			if (barDisplay >= 1.0f)
 			{
