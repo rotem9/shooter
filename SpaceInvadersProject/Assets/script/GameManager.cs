@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
 
     public static int score = 0;
 	public static float counter = 4.0f;
+
     // Use this for initialization
 	void Start () {
 		StartCoroutine (monsters());

@@ -9,9 +9,15 @@ public class enemyMovment2 : MonoBehaviour {
 	public bool hit;
 	public int hitCounter;
 
+	private AudioSource sourceAudio;
+	public AudioClip enemy2dies;
+	public AudioClip enemy2hurts;
+	public AudioClip enemy2enters;
+
 	// Use this for initialization
 	void Start () {
 		hit = false;
+		sourceAudio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -20,16 +26,19 @@ public class enemyMovment2 : MonoBehaviour {
 		if (hit) {
 			power = PlayerMovement.currPower;
 			if (power >= 0.95f) {
+				sourceAudio.PlayOneShot(enemy2dies, 1f);
 				Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 				Destroy (gameObject);
 			} else {
 				//insert effect for getting hit but not dying...
+				sourceAudio.PlayOneShot(enemy2hurts, 1f);
 				hit = false;
 				hitCounter += 1;
 			}
 		}
 
 		if (hitCounter == 2) {
+			sourceAudio.PlayOneShot(enemy2dies, 1f);
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		}

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: b02a423ed6abc7440bce0e82ee5d9bcf
-timeCreated: 1448901312
+timeCreated: 1450602301
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - alien1: {instanceID: 0}
+  - alien2: {instanceID: 0}
+  - alien3: {instanceID: 0}
+  - textScore: {instanceID: 0}
+  - enemy1enters: {fileID: 8300000, guid: fe3f6714cb814a340804e8a27d557fce, type: 3}
+  - enemy2enters: {fileID: 8300000, guid: de54f10b5a571464e96e7c7f4e971d1a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
