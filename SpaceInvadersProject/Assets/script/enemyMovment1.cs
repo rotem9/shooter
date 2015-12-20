@@ -20,7 +20,7 @@ public class enemyMovment1 : MonoBehaviour {
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		}
-		if (GirlBehavior.alive) {
+		if (GirlBehavior.alive) { 
 			transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y + 0f);
 		}
 	}

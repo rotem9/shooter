@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip toyHitMonster;
 	public AudioClip throwToy;
 	public AudioClip gameOver;
+	public AudioClip atomicbear;
 	
 	// Use this for initialization
 	void Start () {
@@ -48,6 +49,13 @@ public class SoundManager : MonoBehaviour {
 			sourceAudio.PlayOneShot (gameOver, 1f);
 			enemyMovment1.playGameOver = false;
 		}
+
+		if (PowerUp1.playatomicbear) {
+			sourceAudio.PlayOneShot(atomicbear, 0.2f);
+			PowerUp1.playatomicbear = false;
+		}
+
 	}
+
 }
 
