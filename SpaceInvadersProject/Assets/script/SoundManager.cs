@@ -7,6 +7,9 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip enemy1dies;
 	public AudioClip enemy2dies;
 	public AudioClip enemy2hurt;
+	public AudioClip toyHitMonster;
+	public AudioClip throwToy;
+	public AudioClip gameOver;
 	
 	// Use this for initialization
 	void Start () {
@@ -22,13 +25,28 @@ public class SoundManager : MonoBehaviour {
 		}
 		
 		if (enemyMovment2.playenemy2hurts) {
-			sourceAudio.PlayOneShot (enemy2dies, 1f);
-			enemyMovment2.playenemy2dies = false;
-		}
-		
-		if (enemyMovment2.playenemy2hurts) {
 			sourceAudio.PlayOneShot(enemy2hurt, 1f);
 			enemyMovment2.playenemy2hurts = false;
+		}
+		
+		if (enemyMovment2.playenemy2dies) {
+			sourceAudio.PlayOneShot(enemy2dies, 1f);
+			enemyMovment2.playenemy2dies = false;
+		}
+
+		if (Bullet.playhitmonster) {
+			sourceAudio.PlayOneShot(toyHitMonster, 0.2f);
+			Bullet.playhitmonster = false;
+		}
+
+		if (PlayerMovement.playthrow) {
+			sourceAudio.PlayOneShot(throwToy, 1f);
+			PlayerMovement.playthrow = false;
+		}
+
+		if (enemyMovment1.playGameOver) {
+			sourceAudio.PlayOneShot (gameOver, 1f);
+			enemyMovment1.playGameOver = false;
 		}
 	}
 }

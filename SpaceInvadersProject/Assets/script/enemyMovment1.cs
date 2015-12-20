@@ -7,6 +7,7 @@ public class enemyMovment1 : MonoBehaviour {
 	public float movementSpeed = 0.02f;
 	public GameObject explotion;
 	public static bool playenemy1dies;
+	public static bool playGameOver;
 	// Use this for initialization
 	void Start () {
 	}
@@ -32,6 +33,7 @@ public class enemyMovment1 : MonoBehaviour {
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		} else if (objectCollision.gameObject.tag == "girl") {
+			playGameOver = true;
 			Destroy (gameObject);
 		}
     }

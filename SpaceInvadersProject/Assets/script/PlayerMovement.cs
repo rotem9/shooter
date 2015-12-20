@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float movementSpeed = 0.1f;
 	public GameObject powerBar;
 	public static float currPower;
+	public static bool playthrow;
 	
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0) && (PowerUp1.clicked == false))
 		{
 			// insert throwing animation
+			playthrow = true;
 			fire();
 			currPower = PowerBar.barDisplay;
 			PowerBar.PowerBarOn = false;

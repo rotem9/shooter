@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Bullet : MonoBehaviour {
@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 	
 	public GameObject explosion;
 	public static int power;
+	public static bool playhitmonster;
 	
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class Bullet : MonoBehaviour {
 	{
 		if(objectCollision.gameObject.tag == "enemy")
 		{
+			playhitmonster = true;
 			Destroy(gameObject);
 			//Instantiate (explosion, transform.position, Quaternion.identity);
 			//Destroy(gameObject);
