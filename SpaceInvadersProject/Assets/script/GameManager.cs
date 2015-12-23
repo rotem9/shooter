@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour {
 	public Vector2 pos4;
 	public Vector2 pos5;
 	public Vector2 pos6;
+	public Vector2 pos7;
+	public Vector2 pos8;
+	public Vector2 pos9;
+	public Vector2 pos10;
 	public float startWait;
 
     public Text textScore;
@@ -23,22 +27,51 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
 	void Start () {
+		ProgBar.mySeconds = 12.95f;
 		StartCoroutine (monsters());
 	}
 
 	IEnumerator monsters() {
-		//yield return new WaitForSeconds (startWait);
-		for (int i = 0; i < 10; i++) {
-			counter -= 0.2f;
-			Vector2 pos1 = new Vector2 (6.31f, -2.786f);
-			Instantiate (alien1, pos1, Quaternion.identity);
-			yield return new WaitForSeconds (counter);
-		}
 
+		Vector2 pos1 = new Vector2 (6, -2.5f);
+		Instantiate (alien1, pos1, Quaternion.identity);
+		yield return new WaitForSeconds (2f);
+		
+		Vector2 pos2 = new Vector2 (6, 2);
+		Instantiate (alien1, pos2, Quaternion.identity);
+		yield return new WaitForSeconds (1.75f);
+		
+		Vector2 pos3 = new Vector2 (6, 2.5f);
+		Instantiate (alien1, pos3, Quaternion.identity);
+		yield return new WaitForSeconds (1f);
+		
+		Vector2 pos4 = new Vector2 (6, 2f);
+		Instantiate (alien2, pos4, Quaternion.identity);
+		yield return new WaitForSeconds (1.8f);
+		
+		Vector2 pos5 = new Vector2 (6, -2.5f);
+		Instantiate (alien1, pos5, Quaternion.identity);
+		yield return new WaitForSeconds (1.5f);
+		
+		Vector2 pos6 = new Vector2 (6, -2.5f);
+		Instantiate (alien1, pos6, Quaternion.identity);
+		yield return new WaitForSeconds (1.4f);
+		
+		Vector2 pos7 = new Vector2 (6, -2.5f);
+		Instantiate (alien1, pos7, Quaternion.identity);
+		yield return new WaitForSeconds (1f);
+		
+		Vector2 pos8 = new Vector2 (6, 1.75f);
+		Instantiate (alien1, pos8, Quaternion.identity);
+		yield return new WaitForSeconds (1.5f);
 
-			//Vector2 pos2 = new Vector2 (6, 2);
-			//Instantiate (alien2, pos2, Quaternion.identity);
-			//yield return new WaitForSeconds (2f);
+		Vector2 pos9 = new Vector2 (6, 2f);
+		Instantiate (alien2, pos4, Quaternion.identity);
+		yield return new WaitForSeconds (1f);
+		
+		Vector2 pos10 = new Vector2 (6, -2.5f);
+		Instantiate (alien1, pos5, Quaternion.identity);
+		//yield return new WaitForSeconds (1.5f)
 			
 	}
 	// Update is called once per frame

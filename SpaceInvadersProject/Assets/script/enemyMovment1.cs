@@ -18,6 +18,7 @@ public class enemyMovment1 : MonoBehaviour {
 		if (AtomicBear.hit == true) {
 			playenemy1dies = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
+			GameManager.score++;
 			Destroy (gameObject);
 		}
 		if (GirlBehavior.alive) {
