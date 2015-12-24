@@ -18,11 +18,11 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ((PowerUp1.clicked == false) && Input.GetKeyDown(KeyCode.Mouse0)) {
+		if ((PowerUp1.clicked == false) && (PowerUp2.press == false) && Input.GetKeyDown(KeyCode.Mouse0)) {
 			PowerBar.PowerBarOn = true;
 		}
 		
-		if (Input.GetMouseButtonUp(0) && (PowerUp1.clicked == false))
+		if (Input.GetMouseButtonUp(0) && (PowerUp1.clicked == false) && (PowerUp2.press == false))
 		{
 			// insert throwing animation
 			playthrow = true;

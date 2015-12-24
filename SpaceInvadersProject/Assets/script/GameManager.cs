@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour {
 		Instantiate (alien1, pos3, Quaternion.identity);
 		yield return new WaitForSeconds (1f);
 		
-		Vector2 pos4 = new Vector2 (6, 2f);
+		Vector2 pos4 = new Vector2 (6.5f, 1.5f);
 		Instantiate (alien2, pos4, Quaternion.identity);
 		yield return new WaitForSeconds (1.8f);
 		
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour {
 		Instantiate (alien1, pos8, Quaternion.identity);
 		yield return new WaitForSeconds (1.5f);
 
-		Vector2 pos9 = new Vector2 (6, 2f);
+		Vector2 pos9 = new Vector2 (6.5f, 1.3f);
 		Instantiate (alien2, pos4, Quaternion.identity);
 		yield return new WaitForSeconds (1f);
 		

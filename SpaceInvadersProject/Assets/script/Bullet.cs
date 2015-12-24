@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
 		Vector3 sp = Camera.main.WorldToScreenPoint (transform.position);
 		Vector3 dir = (Input.mousePosition - sp).normalized;
 		blah.AddForce (dir * power);
+
 	}
 	
 	// Update is called once per frame

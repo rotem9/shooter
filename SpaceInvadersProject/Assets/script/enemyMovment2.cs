@@ -24,7 +24,7 @@ public class enemyMovment2 : MonoBehaviour
 
 		if (hit) {
 			power = PlayerMovement.currPower;
-			if (power >= 0.95f) {
+			if (power >= 0.95f || PowerUp2.clicked) {
 				playenemy2dies = true;
 				Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
 				Destroy (gameObject);

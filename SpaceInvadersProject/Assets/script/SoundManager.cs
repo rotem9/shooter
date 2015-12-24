@@ -36,7 +36,7 @@ public class SoundManager : MonoBehaviour {
 		}
 
 		if (Bullet.playhitmonster) {
-			sourceAudio.PlayOneShot(toyHitMonster, 0.2f);
+			sourceAudio.PlayOneShot(toyHitMonster, 0.1f);
 			Bullet.playhitmonster = false;
 		}
 

@@ -24,7 +24,8 @@ public class PowerUp1 : MonoBehaviour {
 		clicked = true;
 	}
 
-	public void mouseOver() {
+	public void OnMouseDown() {
+		clicked = true;
 		PowerBar.PowerBarOn = false;
 	}
 }
