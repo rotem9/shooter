@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		transform.Rotate (0, 0, -6.0f * 10.0f * Time.deltaTime * 3f);
 		//transform.position = new Vector2(transform.position.x + 0.2f, transform.position.y);
 		if (PlayerMovement.fired) {
 			Bullet.powerTrail.enabled = false;
