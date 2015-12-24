@@ -11,11 +11,13 @@ public class enemyMovment2 : MonoBehaviour
 	public int hitCounter;
 	public static bool playenemy2dies;
 	public static bool playenemy2hurts;
+	public Animator anim;
 
 	// Use this for initialization
 	void Start ()
 	{
 		hit = false;
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +33,7 @@ public class enemyMovment2 : MonoBehaviour
 			} else {
 				//insert effect for getting hit but not dying...
 				playenemy2hurts = true;
+				anim.SetBool("hit", true);
 				hit = false;
 				hitCounter += 1;
 			}
