@@ -51,12 +51,13 @@ public class enemyMovment2 : MonoBehaviour
 			GameManager.score++;
 			Destroy (gameObject);
 		}
-		if (GirlBehavior.alive) {
+		if (GirlBehavior.alive && PowerUp3.clicked == false) {
+			anim.enabled = true;
 			if (transform.position.x <= -1f)
 				transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y - 0.01f);
 			else
 				transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y);
-		}
+		} else anim.enabled = false;
 	}
 	
 	void OnCollisionEnter2D (Collision2D objectCollision)

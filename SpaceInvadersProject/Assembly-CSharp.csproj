@@ -54,6 +54,7 @@
      <Compile Include="Assets\script\PowerBar.cs" />
      <Compile Include="Assets\script\PowerUp1.cs" />
      <Compile Include="Assets\script\PowerUp2.cs" />
+     <Compile Include="Assets\script\PowerUp3.cs" />
      <Compile Include="Assets\script\ProgBar.cs" />
      <Compile Include="Assets\script\SoundManager.cs" />
      <Compile Include="Assets\script\StartMenu.cs" />

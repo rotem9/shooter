@@ -8,7 +8,7 @@ public class PowerBar : MonoBehaviour
 	public Texture2D progressBarEmpty;
 	public Texture2D progressBarFull;
 	
-	public Vector2 size = new Vector2(20, 60);
+	public Vector2 size = new Vector2(10, 60);
 	public float speed = 10f;
 	public static float barDisplay = 0;
 	public static bool PowerBarOn = false;  

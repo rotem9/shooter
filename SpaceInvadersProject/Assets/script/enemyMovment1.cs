@@ -8,8 +8,10 @@ public class enemyMovment1 : MonoBehaviour {
 	public GameObject explotion;
 	public static bool playenemy1dies;
 	public static bool playGameOver;
+	public Animator anim;
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -21,13 +23,14 @@ public class enemyMovment1 : MonoBehaviour {
 			GameManager.score++;
 			Destroy (gameObject);
 		}
-		if (GirlBehavior.alive) {
+		if (GirlBehavior.alive && PowerUp3.clicked == false) {
+			anim.enabled = true;
 			if (transform.position.x >= 4.6) {
 				transform.position = new Vector2 (transform.position.x - movementSpeed, -2.67f);
 			} else {
 				transform.position = new Vector2 (transform.position.x - movementSpeed, -2.786f);
 			}
-		}
+		} else anim.enabled = false;
 	}
 
     void OnCollisionEnter2D(Collision2D objectCollision)

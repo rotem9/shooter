@@ -21,6 +21,8 @@ public class ProgBar : MonoBehaviour {
 				fill = 0.7f / pieces;
 				sum = 1f;
 		for (float i = pieces; i > 0f; i = i - 1) {
+			if (PowerUp3.clicked) 
+				yield return new WaitForSeconds (4f);
 			sum -= fill;
 			progressBar.fillAmount = sum;
 			yield return new WaitForSeconds (0.1f);
