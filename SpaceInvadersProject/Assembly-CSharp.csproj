@@ -61,6 +61,8 @@
      <Compile Include="Assets\script\enemyMovment1.cs" />
      <Compile Include="Assets\script\enemyMovment2.cs" />
      <Compile Include="Assets\script\enemyMovment3.cs" />
+     <Compile Include="Assets\script\enemyMovment4.cs" />
+     <Compile Include="Assets\script\jump.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

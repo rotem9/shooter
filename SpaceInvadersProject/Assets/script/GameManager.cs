@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public GameObject alien1; 
     public GameObject alien2;
     public GameObject alien3;
+	public GameObject alien4;
 	public Vector2 pos1;
 	public Vector2 pos2;
 	public Vector2 pos3;
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour {
 	IEnumerator monsters() {
 
 		Vector2 pos1 = new Vector2 (6, -2.5f);
-		Instantiate (alien1, pos1, Quaternion.identity);
+		Instantiate (alien3, pos1, Quaternion.identity);
 		yield return new WaitForSeconds (2f);
 
 		if (PowerUp3.clicked) 
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour {
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos4 = new Vector2 (6.5f, 1.5f);
-		Instantiate (alien2, pos4, Quaternion.identity);
+		Instantiate (alien4, pos4, Quaternion.identity);
 		yield return new WaitForSeconds (1.8f);
 
 		if (PowerUp3.clicked) 
