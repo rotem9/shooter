@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour {
 	public static bool fired;
 	public Animator anim;
 	public int throwHash;
+	public int aimHash;
+	public int threwHash;
 	public GameObject ice;
-	public GameObject ice2;
-	public GameObject ice3;
 
 	
 	// Use this for initialization
@@ -21,18 +21,18 @@ public class PlayerMovement : MonoBehaviour {
 	
 		fired = false;
 		anim = GetComponent<Animator> ();
-		throwHash = Animator.StringToHash ("fired");
-		//Instantiate (ice, new Vector2(0,0), Quaternion.identity);
-		//ice.GetComponent<ParticleSystem> ().enableEmission = true;
-		//ice.GetComponent<ParticleSystem> ().Play (true);
+		throwHash = Animator.StringToHash ("fire");
+		aimHash = Animator.StringToHash ("aim");
+		threwHash = Animator.StringToHash ("threw");
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if ((PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false)&& Input.GetKeyDown(KeyCode.Mouse0)) {
+			if ((PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false)&& Input.GetKeyDown(KeyCode.Mouse0)) {
 			PowerBar.PowerBarOn = true;
+			anim.SetTrigger(aimHash);
 		}
 		
 		if (Input.GetMouseButtonUp(0) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false))
@@ -46,18 +46,22 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		if (PowerUp3.clicked == true) {
-			ice.GetComponent<ParticleSystem>().enableEmission = true;
-			
+			Instantiate (ice, new Vector2 (0, 0), Quaternion.identity);	
+			Destroy (ice);
+		} 
+		if (PowerUp3.clicked == false) {
+			//Destroy(ice);
 		}
 	}
 	
 
 	IEnumerator fireee() {
 
-		anim.SetTrigger(throwHash);
-		yield return new WaitForSeconds (0.4f);
-		Instantiate (bullet, new Vector2 (-3.2f, 0f), Quaternion.identity);
+		anim.SetTrigger (throwHash);
+		yield return new WaitForSeconds (0.2f);
+		Instantiate (bullet, new Vector2 (-3.2f, -0.35f), Quaternion.identity);
 		fired = true;
+		anim.SetTrigger (threwHash);
 
 	}
 	
