@@ -8,10 +8,17 @@ public class Bullet : MonoBehaviour
 	public static int power;
 	public static bool playhitmonster;
 	public static TrailRenderer powerTrail;
+	public static Animator anim;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		anim = GetComponent<Animator> ();
+
+		if (PowerUp2.clicked == true) {
+			anim.SetBool ("special", true);
+		} 
+
 		powerTrail = GetComponent <TrailRenderer> ();
 		powerTrail.enabled = false;
 
@@ -25,6 +32,7 @@ public class Bullet : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+
 		transform.Rotate (0, 0, -6.0f * 10.0f * Time.deltaTime * 3f);
 		//transform.position = new Vector2(transform.position.x + 0.2f, transform.position.y);
 		if (PlayerMovement.fired) {
@@ -38,6 +46,7 @@ public class Bullet : MonoBehaviour
 		if (transform.position.x > 5 || transform.position.y < -3.5 || transform.position.y > 3.5 || transform.position.x < -4.7) {
 			Destroy (gameObject);
 		}
+
 	}
 	
 	void OnCollisionEnter2D (Collision2D objectCollision)

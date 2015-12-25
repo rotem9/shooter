@@ -11,9 +11,11 @@ public class PlayerMovement : MonoBehaviour {
 	public static bool fired;
 	public Animator anim;
 	public int throwHash;
+
 	
 	// Use this for initialization
 	void Start () {
+	
 		fired = false;
 		anim = GetComponent<Animator> ();
 		throwHash = Animator.StringToHash ("fired");
@@ -35,8 +37,9 @@ public class PlayerMovement : MonoBehaviour {
 			PowerBar.PowerBarOn = false;
 			fired = false;
 		}
-	}
 
+	}
+	
 
 	IEnumerator fireee() {
 
