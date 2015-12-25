@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\script\AtomicBear.cs" />
      <Compile Include="Assets\script\Bullet.cs" />
+     <Compile Include="Assets\script\CoolDown.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
      <Compile Include="Assets\script\GirlBehavior.cs" />
      <Compile Include="Assets\script\Level2.cs" />
@@ -62,7 +63,6 @@
      <Compile Include="Assets\script\enemyMovment2.cs" />
      <Compile Include="Assets\script\enemyMovment3.cs" />
      <Compile Include="Assets\script\enemyMovment4.cs" />
-     <Compile Include="Assets\script\jump.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

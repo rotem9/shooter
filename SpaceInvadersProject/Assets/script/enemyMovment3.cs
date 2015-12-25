@@ -9,6 +9,7 @@ public class enemyMovment3 : MonoBehaviour
 	//public static bool playenemy1dies;
 	//public static bool playGameOver;
 	public Animator anim;
+	private bool jump = false;
 	// Use this for initialization
 	void Start ()
 	{
@@ -29,13 +30,20 @@ public class enemyMovment3 : MonoBehaviour
 		}
 		if (GirlBehavior.alive && PowerUp3.clicked == false) {
 			anim.enabled = true;
-			//if (transform.position.x >= 4.6) {
-			transform.position = new Vector2 (transform.position.x - movementSpeed, -2f);
-			//} else {
+			if (jump)
+			transform.position = new Vector2 (transform.position.x - movementSpeed, -1.78f);
 			//	transform.position = new Vector2 (transform.position.x - movementSpeed, -2.786f);
 			//}
 		} else
 			anim.enabled = false;
+	}
+
+	public void jumpStart () {
+		jump = true;
+	}
+
+	public void stand () {
+		jump = false;
 	}
 	
 	void OnCollisionEnter2D (Collision2D objectCollision)

@@ -9,6 +9,9 @@ public class PowerUp2 : MonoBehaviour
 	public static bool clicked = false;
 	public static bool press = false;
 	public float countdown;
+	public Button button;
+	private float timeStamp;
+	public float coolDownPeriodInSeconds = 8f;
 
 	// Use this for initialization
 	void Start ()
@@ -20,6 +23,11 @@ public class PowerUp2 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (timeStamp != 0 && timeStamp <= Time.time) {
+			button.enabled = true;
+			timeStamp = Time.time + 2f;
+		}
+
 		if (countdown <= 5.98 && countdown >= 5.95)
 			press = false;
 		if (clicked == true) {
@@ -31,12 +39,18 @@ public class PowerUp2 : MonoBehaviour
 
 	public void clickOnPowerUp2 ()
 	{
-		countdown = 6;
-		clicked = true;
+		if (button.enabled) {
+			countdown = 6;
+			clicked = true;
+			button.enabled = false;
+			timeStamp = Time.time + coolDownPeriodInSeconds;
+		}
 		//time = Time.realtimeSinceStartup;
 	}
 
-	public void OnMouseDown () {
-		press = true;
+	public void OnMouseDown ()
+	{
+		if (button.enabled)
+			press = true;
 	}
 }

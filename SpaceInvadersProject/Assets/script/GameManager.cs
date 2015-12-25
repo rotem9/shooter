@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
 	void Start () {
+		//CoolDown.pu1Unlocked = true;
 		ProgBar.mySeconds = 12.95f;
 		StartCoroutine (monsters());
 	}
