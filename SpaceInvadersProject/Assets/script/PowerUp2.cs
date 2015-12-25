@@ -9,6 +9,7 @@ public class PowerUp2 : MonoBehaviour
 	public static bool clicked = false;
 	public static bool press = false;
 	public float countdown;
+
 	// Use this for initialization
 	void Start ()
 	{

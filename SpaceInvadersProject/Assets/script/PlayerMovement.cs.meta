@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: ede624803357cb243b1cf5be8f373391
-timeCreated: 1448900051
+timeCreated: 1451045603
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bullet: {instanceID: 0}
+  - powerBar: {instanceID: 0}
+  - anim: {instanceID: 0}
+  - ice: {fileID: 198666, guid: 8a04e41d6aba14baa9434ec0bb0a731c, type: 2}
+  - ice2: {fileID: 129598, guid: e0fd2580dad5f4a5f8551a5457d54eaa, type: 2}
+  - ice3: {fileID: 181000, guid: 452740dfecc5342b4bc4c4a9425c846d, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

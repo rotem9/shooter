@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour {
 	public static bool fired;
 	public Animator anim;
 	public int throwHash;
+	public GameObject ice;
+	public GameObject ice2;
+	public GameObject ice3;
 
 	
 	// Use this for initialization
@@ -19,6 +22,10 @@ public class PlayerMovement : MonoBehaviour {
 		fired = false;
 		anim = GetComponent<Animator> ();
 		throwHash = Animator.StringToHash ("fired");
+		//Instantiate (ice, new Vector2(0,0), Quaternion.identity);
+		//ice.GetComponent<ParticleSystem> ().enableEmission = true;
+		//ice.GetComponent<ParticleSystem> ().Play (true);
+
 	}
 	
 	// Update is called once per frame
@@ -38,6 +45,10 @@ public class PlayerMovement : MonoBehaviour {
 			fired = false;
 		}
 
+		if (PowerUp3.clicked == true) {
+			ice.GetComponent<ParticleSystem>().enableEmission = true;
+			
+		}
 	}
 	
 
