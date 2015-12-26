@@ -18,9 +18,9 @@ public class AtomicBear : MonoBehaviour {
 		if (transform.position.y <= -2.3f && transform.position.y > -2.5f)
 			hit = true;
 		if (transform.position.y <= -2.5f) {
-			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
 			hit = false;
 			Destroy (gameObject);
+			Flash.flashActive = true;
 		}
 	}
 	

@@ -48,6 +48,7 @@
      <Compile Include="Assets\script\AtomicBear.cs" />
      <Compile Include="Assets\script\Bullet.cs" />
      <Compile Include="Assets\script\CoolDown.cs" />
+     <Compile Include="Assets\script\Flash.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
      <Compile Include="Assets\script\GirlBehavior.cs" />
      <Compile Include="Assets\script\Level2.cs" />
