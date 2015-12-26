@@ -49,7 +49,7 @@ public class enemyMovment4 : MonoBehaviour {
 			//playenemy2dies = true;
 			enemy4dies = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
-			GameManager.score++;
+			PlayerMovement.score++;
 			Destroy (gameObject);
 		}
 		if (GirlBehavior.alive && PowerUp3.clicked == false) {
@@ -66,7 +66,7 @@ public class enemyMovment4 : MonoBehaviour {
 		if (objectCollision.gameObject.tag == "bullet") {
 			//hit = true;
 			enemy4dies = true;
-			GameManager.score++;
+			PlayerMovement.score++;
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);
 		} else if (objectCollision.gameObject.tag == "girl") {

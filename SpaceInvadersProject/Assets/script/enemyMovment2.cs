@@ -29,7 +29,7 @@ public class enemyMovment2 : MonoBehaviour
 			if (power >= 0.95f || PowerUp2.clicked) {
 				playenemy2dies = true;
 				Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
-				GameManager.score++;
+				PlayerMovement.score++;
 				Destroy (gameObject);
 			} else {
 				//insert effect for getting hit but not dying...
@@ -43,14 +43,14 @@ public class enemyMovment2 : MonoBehaviour
 		if (hitCounter == 2) {
 			playenemy2dies = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
-			GameManager.score++;
+			PlayerMovement.score++;
 			Destroy (gameObject);
 		}
 
 		if (AtomicBear.hit == true) {
 			playenemy2dies = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
-			GameManager.score++;
+			PlayerMovement.score++;
 			Destroy (gameObject);
 		}
 		if (GirlBehavior.alive && PowerUp3.clicked == false) {

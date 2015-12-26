@@ -25,38 +25,40 @@ public class GameManager : MonoBehaviour {
 	private bool finished;
 	public GameObject dir;
 	public GameObject gotIt;
-	public static bool go;
+	//public static bool go;
 	public static bool playwave1;
 	public static bool playwave2 = false;
 	public static bool playwave3 = false;
 	public static bool playwave4 = false;
 
-    public static int score = 0;
+    //public static int score = 0;
 	public static float counter = 4.0f;
 
     // Use this for initialization
 	void Start () {
 		//CoolDown.pu1Unlocked = true;
 		ProgBar.mySeconds = 12.95f + 3.5f;
+		Snatched.level = 1;
+		PlayerMovement.score = 0;
 		//StartCoroutine (monsters());
 		//Instantiate (dir, new Vector2 (0, 0), Quaternion.identity);
 		//Instantiate (wave1, new Vector2(0,0), Quaternion.identity);
 	}
 
 	public void gotItFunc() {
-		go = true;
+		PlayerMovement.go = true;
 		StartCoroutine (monsters ());
 		Destroy (dir);
 		Destroy (gotIt);
 	}
 
 	public void downOnGotit () {
-		go = true;
+		PlayerMovement.go = true;
 	}
 
 	IEnumerator monsters() {
 		yield return new WaitForSeconds (1f);
-		go = false;
+		PlayerMovement.go = false;
 		playwave1 = true;
 		Instantiate (wave1, new Vector2(0,0), Quaternion.identity);
 		yield return new WaitForSeconds (2.5f);
@@ -131,9 +133,10 @@ public class GameManager : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-      	if (score == 10) {
+      	if (PlayerMovement.score == 10) {
+			PlayerMovement.score = 0;
 			Instantiate(waveComplete, new Vector2(0,0), Quaternion.identity);
-			score = 0;
+			//PlayerMovement.score = 0;
 		}
     }
 }

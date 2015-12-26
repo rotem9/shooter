@@ -11,6 +11,7 @@ public class CompleteWave : MonoBehaviour {
 	IEnumerator wait() {
 		
 		yield return new WaitForSeconds (3.5f);
+		PlayerMovement.wavecompletedcompleted = true;
 		Destroy (gameObject);
 
 	}

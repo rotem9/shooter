@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 	
 	public GameObject bullet;
 	public float movementSpeed = 0.1f;
@@ -17,10 +18,14 @@ public class PlayerMovement : MonoBehaviour {
 	public int special_throwHash;
 	public int special_aimHash;
 	private bool specialActive;
+	public static bool go = false;
+	public static bool wavecompletedcompleted = false;
+	public static int score = 0;
 
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 
 		specialActive = false;
 		fired = false;
@@ -34,24 +39,24 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 
-		if ((PowerUp1.clicked == false) && (GameManager.go == false) && (PowerUp2.press == false) && (PowerUp3.press == false)&& Input.GetKeyDown(KeyCode.Mouse0)) {
+		if ((PowerUp1.clicked == false) && (go == false) && (PowerUp2.press == false) && (PowerUp3.press == false) && Input.GetKeyDown (KeyCode.Mouse0)) {
 			PowerBar.PowerBarOn = true;
 
 			if (PowerUp2.clicked == false) {
-				anim.SetTrigger(aimHash);
+				anim.SetTrigger (aimHash);
 			} else {
-				anim.SetTrigger(special_aimHash);
+				anim.SetTrigger (special_aimHash);
 				specialActive = true;
 			}
 		}
 		
-		if (Input.GetMouseButtonUp(0) && (GameManager.go == false) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false))
-		{
+		if (Input.GetMouseButtonUp (0) && (go == false) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false)) {
 			playthrow = true;
 			//fire();
-			StartCoroutine (fireee());
+			StartCoroutine (fireee ());
 			currPower = PowerBar.barDisplay;
 			PowerBar.PowerBarOn = false;
 			fired = false;
@@ -62,15 +67,26 @@ public class PlayerMovement : MonoBehaviour {
 			Destroy (ice);
 		} 
 
-	}
-	
+		if (wavecompletedcompleted == true) {
+			wavecompletedcompleted = false;
+			if (Snatched.level == 1)
+				Application.LoadLevel ("LevelTwo");
+			if (Snatched.level == 2)
+				Application.LoadLevel ("LevelThree");
+			if (Snatched.level == 3)
+				Application.LoadLevel ("LevelFour");
+			//if (Snatched.level == 4)  >> end
+		}
 
-	IEnumerator fireee() {
+	}
+
+	IEnumerator fireee ()
+	{
 
 		if (specialActive == false) {
-			anim.SetTrigger(throwHash);
+			anim.SetTrigger (throwHash);
 		} else {
-			anim.SetTrigger(special_throwHash);
+			anim.SetTrigger (special_throwHash);
 			specialActive = false;
 		}
 	
@@ -81,7 +97,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 	
-	private void fire()
+	private void fire ()
 	{
 		Instantiate (bullet, new Vector2 (-3.53f, -1.35f), Quaternion.identity);
 		//Instantiate(bullet, new Vector2(transform.position.x + 1, transform.position.y), Quaternion.identity);
