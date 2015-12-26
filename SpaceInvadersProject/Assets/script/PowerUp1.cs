@@ -11,9 +11,13 @@ public class PowerUp1 : MonoBehaviour {
 	private float timeStamp;
 	public float coolDownPeriodInSeconds = 8f;
 
+
+
 	// Use this for initialization
 	void Start () {
 		clicked = false;
+
+	
 	}
 	
 	// Update is called once per frame
@@ -22,7 +26,6 @@ public class PowerUp1 : MonoBehaviour {
 			button.enabled = true;
 			timeStamp = Time.time + 2f;
 		}
-
 	}
 
 	public void clickOnPowerUp1() {
