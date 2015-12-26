@@ -10,6 +10,7 @@ public class enemyMovment3 : MonoBehaviour
 	//public static bool playGameOver;
 	public Animator anim;
 	private bool jump = false;
+	public static bool playdiejump;
 	// Use this for initialization
 	void Start ()
 	{
@@ -24,6 +25,7 @@ public class enemyMovment3 : MonoBehaviour
 
 		if (AtomicBear.hit == true) {
 			//playenemy1dies = true;
+			playdiejump = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
 			GameManager.score++;
 			Destroy (gameObject);
@@ -50,6 +52,7 @@ public class enemyMovment3 : MonoBehaviour
 	{
 		if (objectCollision.gameObject.tag == "bullet") {
 			//playenemy1dies = true;
+			playdiejump = true;
 			GameManager.score++;		
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);

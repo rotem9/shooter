@@ -11,6 +11,8 @@ public class enemyMovment4 : MonoBehaviour {
 	//public static bool playenemy2dies;
 	//public static bool playenemy2hurts;
 	public Animator anim;
+	public static bool enemy4dies;
+
 	
 	// Use this for initialization
 	void Start ()
@@ -45,6 +47,7 @@ public class enemyMovment4 : MonoBehaviour {
 		
 		if (AtomicBear.hit == true) {
 			//playenemy2dies = true;
+			enemy4dies = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
 			GameManager.score++;
 			Destroy (gameObject);
@@ -62,6 +65,7 @@ public class enemyMovment4 : MonoBehaviour {
 	{
 		if (objectCollision.gameObject.tag == "bullet") {
 			//hit = true;
+			enemy4dies = true;
 			GameManager.score++;
 			Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			Destroy (gameObject);

@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject dir;
 	public GameObject gotIt;
 	public static bool go;
+	public static bool playwave1;
+	public static bool playwave2 = false;
+	public static bool playwave3 = false;
+	public static bool playwave4 = false;
 
     public static int score = 0;
 	public static float counter = 4.0f;
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour {
 	IEnumerator monsters() {
 		yield return new WaitForSeconds (1f);
 		go = false;
+		playwave1 = true;
 		Instantiate (wave1, new Vector2(0,0), Quaternion.identity);
 		yield return new WaitForSeconds (2.5f);
 
