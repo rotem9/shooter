@@ -6,6 +6,7 @@ public class PowerUp1 : MonoBehaviour {
 
 	public GameObject bear;
 	public static bool clicked;
+	//public static bool press;
 	public static bool playatomicbear;
 	public Button button;
 	private float timeStamp;

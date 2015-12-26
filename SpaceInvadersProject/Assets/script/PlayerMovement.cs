@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	
 		yield return new WaitForSeconds (0.2f);
-		Instantiate (bullet, new Vector2 (-3.2f, -0.35f), Quaternion.identity);
+		Instantiate (bullet, new Vector2 (-4.3f, -0.5f), Quaternion.identity);
 		fired = true;
 		anim.SetTrigger (threwHash);
 
