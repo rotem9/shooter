@@ -33,7 +33,7 @@ public class PowerUp1 : MonoBehaviour {
 		if (button.enabled) {
 			playatomicbear = true;
 			//PowerBar.PowerBarOn = false;
-			Instantiate (bear, new Vector2 (0f, 5f), Quaternion.identity);
+			Instantiate (bear, new Vector2 (0f, 5.2f), Quaternion.identity);
 			clicked = true;
 			button.enabled = false;
 			timeStamp = Time.time + coolDownPeriodInSeconds;

@@ -12,6 +12,10 @@ public class ProgBar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//StartCoroutine (bar());
+	}
+
+	public void startTime () {
 		StartCoroutine (bar());
 	}
 

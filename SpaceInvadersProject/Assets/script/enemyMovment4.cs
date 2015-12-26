@@ -51,8 +51,8 @@ public class enemyMovment4 : MonoBehaviour {
 		}
 		if (GirlBehavior.alive && PowerUp3.clicked == false) {
 			anim.enabled = true;
-			if (transform.position.x <= -1f)
-				transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y - 0.01f);
+			if (transform.position.x <= 0f)
+				transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y - 0.015f);
 			else
 				transform.position = new Vector2 (transform.position.x - movementSpeed, transform.position.y);
 		} else anim.enabled = false;

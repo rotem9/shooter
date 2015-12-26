@@ -29,6 +29,7 @@ public class enemyMovment2 : MonoBehaviour
 			if (power >= 0.95f || PowerUp2.clicked) {
 				playenemy2dies = true;
 				Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
+				GameManager.score++;
 				Destroy (gameObject);
 			} else {
 				//insert effect for getting hit but not dying...
@@ -42,6 +43,7 @@ public class enemyMovment2 : MonoBehaviour
 		if (hitCounter == 2) {
 			playenemy2dies = true;
 			Instantiate (explotion, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
+			GameManager.score++;
 			Destroy (gameObject);
 		}
 
@@ -64,7 +66,7 @@ public class enemyMovment2 : MonoBehaviour
 	{
 		if (objectCollision.gameObject.tag == "bullet") {
 			hit = true;
-			GameManager.score++;
+			//GameManager.score++;
 			//Instantiate(explotion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
 			//Destroy (gameObject);
 		} else if (objectCollision.gameObject.tag == "girl") {

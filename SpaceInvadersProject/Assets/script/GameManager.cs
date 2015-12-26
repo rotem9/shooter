@@ -20,8 +20,12 @@ public class GameManager : MonoBehaviour {
 	public Vector2 pos9;
 	public Vector2 pos10;
 	public float startWait;
-
-    public Text textScore;
+	public GameObject wave1;
+	public GameObject waveComplete;
+	private bool finished;
+	public GameObject dir;
+	public GameObject gotIt;
+	public static bool go;
 
     public static int score = 0;
 	public static float counter = 4.0f;
@@ -29,11 +33,28 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
 	void Start () {
 		//CoolDown.pu1Unlocked = true;
-		ProgBar.mySeconds = 12.95f;
-		StartCoroutine (monsters());
+		ProgBar.mySeconds = 12.95f + 3.5f;
+		//StartCoroutine (monsters());
+		//Instantiate (dir, new Vector2 (0, 0), Quaternion.identity);
+		//Instantiate (wave1, new Vector2(0,0), Quaternion.identity);
+	}
+
+	public void gotItFunc() {
+		go = true;
+		StartCoroutine (monsters ());
+		Destroy (dir);
+		Destroy (gotIt);
+	}
+
+	public void downOnGotit () {
+		go = true;
 	}
 
 	IEnumerator monsters() {
+		yield return new WaitForSeconds (1f);
+		go = false;
+		Instantiate (wave1, new Vector2(0,0), Quaternion.identity);
+		yield return new WaitForSeconds (2.5f);
 
 		Vector2 pos1 = new Vector2 (6, -2.5f);
 		Instantiate (alien3, pos1, Quaternion.identity);
@@ -105,6 +126,9 @@ public class GameManager : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-       textScore.text = "score: " + score;
+      	if (score == 10) {
+			Instantiate(waveComplete, new Vector2(0,0), Quaternion.identity);
+			score = 0;
+		}
     }
 }

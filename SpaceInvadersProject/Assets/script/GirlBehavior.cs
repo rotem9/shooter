@@ -20,6 +20,7 @@ public class GirlBehavior : MonoBehaviour {
 		if(objectCollision.gameObject.tag == "enemy")
 		{
 			alive = false;
+			Application.LoadLevel("Snatched");
 			Destroy(gameObject);
 		}
 	}

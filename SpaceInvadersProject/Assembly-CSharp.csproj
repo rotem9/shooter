@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\script\AtomicBear.cs" />
      <Compile Include="Assets\script\Bullet.cs" />
+     <Compile Include="Assets\script\CompleteWave.cs" />
      <Compile Include="Assets\script\CoolDown.cs" />
      <Compile Include="Assets\script\Flash.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
@@ -58,8 +59,10 @@
      <Compile Include="Assets\script\PowerUp2.cs" />
      <Compile Include="Assets\script\PowerUp3.cs" />
      <Compile Include="Assets\script\ProgBar.cs" />
+     <Compile Include="Assets\script\Snatched.cs" />
      <Compile Include="Assets\script\SoundManager.cs" />
      <Compile Include="Assets\script\StartMenu.cs" />
+     <Compile Include="Assets\script\Wave.cs" />
      <Compile Include="Assets\script\enemyMovment1.cs" />
      <Compile Include="Assets\script\enemyMovment2.cs" />
      <Compile Include="Assets\script\enemyMovment3.cs" />

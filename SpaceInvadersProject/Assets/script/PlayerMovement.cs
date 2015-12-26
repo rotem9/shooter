@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ((PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false)&& Input.GetKeyDown(KeyCode.Mouse0)) {
+		if ((PowerUp1.clicked == false) && (GameManager.go == false) && (PowerUp2.press == false) && (PowerUp3.press == false)&& Input.GetKeyDown(KeyCode.Mouse0)) {
 			PowerBar.PowerBarOn = true;
 
 			if (PowerUp2.clicked == false) {
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
 			}
 		}
 		
-		if (Input.GetMouseButtonUp(0) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false))
+		if (Input.GetMouseButtonUp(0) && (GameManager.go == false) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false))
 		{
 			playthrow = true;
 			//fire();
