@@ -49,7 +49,6 @@ public class CoolDown : MonoBehaviour {
 			PowerUp1.image.overrideSprite = pu1dis;
 		else if (PowerUp1.enabled)
 			PowerUp1.image.overrideSprite = pu1;
-
 		if (PowerUp2.enabled == false && pu2Unlocked)
 			PowerUp2.image.overrideSprite = pu2dis;
 		else if (PowerUp2.enabled)

@@ -17,7 +17,6 @@ public class PowerUp1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		clicked = false;
-
 	
 	}
 	
