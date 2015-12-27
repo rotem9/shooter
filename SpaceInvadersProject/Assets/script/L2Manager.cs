@@ -36,7 +36,7 @@ public class L2Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//CoolDown.pu1Unlocked = true;
-		ProgBar.mySeconds = 12.95f + 3.5f;
+		ProgBar.mySeconds = 25.2f + 3.5f;
 		Snatched.level = 2;
 		PlayerMovement.score = 0;
 		//StartCoroutine (monsters());
@@ -69,23 +69,23 @@ public class L2Manager : MonoBehaviour {
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
-		Vector2 pos2 = new Vector2 (6, 2);
-		Instantiate (alien1, pos2, Quaternion.identity);
+		Vector2 pos2 = new Vector2 (6, -2.5f);
+		Instantiate (alien3, pos2, Quaternion.identity);
 		yield return new WaitForSeconds (0.5f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
-		Vector2 pos3 = new Vector2 (6, 2.5f);
-		Instantiate (alien4, pos3, Quaternion.identity);
-		yield return new WaitForSeconds (1f);
+		Vector2 pos3 = new Vector2 (6, 1.4f);
+		Instantiate (alien2, pos3, Quaternion.identity);
+		yield return new WaitForSeconds (2.4f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
-		Vector2 pos4 = new Vector2 (6.5f, 1.5f);
-		Instantiate (alien2, pos4, Quaternion.identity);
-		yield return new WaitForSeconds (0.5f);
+		Vector2 pos4 = new Vector2 (6.5f, -2.5f);
+		Instantiate (alien1, pos4, Quaternion.identity);
+		yield return new WaitForSeconds (2f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
@@ -97,42 +97,60 @@ public class L2Manager : MonoBehaviour {
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
-		Vector2 pos6 = new Vector2 (6, -2.5f);
-		Instantiate (alien3, pos6, Quaternion.identity);
-		yield return new WaitForSeconds (2f);
+		Vector2 pos6 = new Vector2 (6, 1.2f);
+		Instantiate (alien2, pos6, Quaternion.identity);
+		yield return new WaitForSeconds (3f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos7 = new Vector2 (6, -2.5f);
 		Instantiate (alien3, pos7, Quaternion.identity);
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (1.5f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
-		Vector2 pos8 = new Vector2 (6, 1.75f);
+		Vector2 pos8 = new Vector2 (6, 1.2f);
 		Instantiate (alien2, pos8, Quaternion.identity);
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (3.5f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos9 = new Vector2 (6.5f, -2.5f);
 		Instantiate (alien3, pos4, Quaternion.identity);
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (1.7f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos10 = new Vector2 (6, -2.5f);
-		Instantiate (alien4, pos5, Quaternion.identity);
+		Instantiate (alien1, pos5, Quaternion.identity);
+		yield return new WaitForSeconds (1.3f);
+
+		if (PowerUp3.clicked) 
+			yield return new WaitForSeconds (4f);
+
+		Instantiate (alien1, new Vector2 (6, 1.75f), Quaternion.identity);
+		yield return new WaitForSeconds (2f);
+		
+		if (PowerUp3.clicked) 
+			yield return new WaitForSeconds (4f);
+
+		Instantiate (alien3, new Vector2 (6.5f, -2.5f), Quaternion.identity);
+		yield return new WaitForSeconds (1.7f);
+		
+		if (PowerUp3.clicked) 
+			yield return new WaitForSeconds (4f);
+
+		Instantiate (alien2, new Vector2 (6, 1.5f), Quaternion.identity);
 		//yield return new WaitForSeconds (1.5f)
 		
 	}
 	// Update is called once per frame
 	void Update () {
-		if (PlayerMovement.score == 10) {
+		if (PlayerMovement.score == 13) {
 			PlayerMovement.score = 0;
 			Instantiate(waveComplete, new Vector2(0,0), Quaternion.identity);
 			//PlayerMovement.score = 0;
