@@ -75,7 +75,8 @@ public class PlayerMovement : MonoBehaviour
 				Application.LoadLevel ("LevelThree");
 			if (Snatched.level == 3)
 				Application.LoadLevel ("LevelFour");
-			//if (Snatched.level == 4)  >> end
+			if (Snatched.level == 4)  
+				Application.LoadLevel ("OpeningMenu");
 		}
 
 	}

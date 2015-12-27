@@ -136,7 +136,6 @@ public class L4Manager : MonoBehaviour {
 			playendlevel4 = true;
 			PlayerMovement.score = 0;
 			Instantiate(waveComplete, new Vector2(0,0), Quaternion.identity);
-			Application.LoadLevel ("OpeningMenu");
 			//PlayerMovement.score = 0;
 		}
 	}
