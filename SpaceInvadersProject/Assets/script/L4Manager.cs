@@ -37,7 +37,7 @@ public class L4Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//CoolDown.pu1Unlocked = true;
-		ProgBar.mySeconds = 12.95f + 3.5f;
+		ProgBar.mySeconds = 53f + 3.5f;
 		Snatched.level = 4;
 		PlayerMovement.score = 0;
 		//StartCoroutine (monsters());
