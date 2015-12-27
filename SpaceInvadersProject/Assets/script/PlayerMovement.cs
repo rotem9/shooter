@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 	public static bool go = false;
 	public static bool wavecompletedcompleted = false;
 	public static int score = 0;
-
+	//public static bool playpowerupice;
 	
 	// Use this for initialization
 	void Start ()
@@ -63,8 +63,9 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 		if (PowerUp3.clicked == true) {
+			//playpowerupice = true;
 			Instantiate (ice, new Vector2 (0, 0), Quaternion.identity);	
-			Destroy (ice);
+		
 		} 
 
 		if (wavecompletedcompleted == true) {

@@ -11,6 +11,7 @@ public class PowerUp3 : MonoBehaviour
 	public Button button;
 	private float timeStamp;
 	public float coolDownPeriodInSeconds = 8f;
+	public static bool playpowerupice;
 	// Use this for initialization
 	void Start ()
 	{
@@ -38,6 +39,7 @@ public class PowerUp3 : MonoBehaviour
 	public void clickOnPowerUp3 ()
 	{
 		if (button.enabled) {
+			playpowerupice = true;
 			countdown = 4;
 			clicked = true;
 			button.enabled = false;

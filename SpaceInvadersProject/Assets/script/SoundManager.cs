@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip enemy3dies;
 	public AudioClip enemy4dies;
 	public AudioClip endlevel;
+	public AudioClip icepowerup;
 	
 	// Use this for initialization
 	void Start () {
@@ -105,6 +106,11 @@ public class SoundManager : MonoBehaviour {
 		if (L4Manager.playendlevel4) {
 			sourceAudio.PlayOneShot(endlevel, 1f);
 			L4Manager.playendlevel4= false;
+		}
+
+		if (PowerUp3.playpowerupice) {
+			sourceAudio.PlayOneShot(icepowerup, 1f);
+			PowerUp3.playpowerupice = false;
 		}
 		
 	}
