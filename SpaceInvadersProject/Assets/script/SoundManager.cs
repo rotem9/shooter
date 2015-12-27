@@ -71,19 +71,19 @@ public class SoundManager : MonoBehaviour {
 			GameManager.playwave1 = false;
 		}
 
-		if (GameManager.playwave2) {
+		if (L2Manager.playwave2) {
 			sourceAudio.PlayOneShot(wave2, 1f);
-			GameManager.playwave2 = false;
+			L2Manager.playwave2 = false;
 		}
 
-		if (GameManager.playwave3) {
+		if (L3Manager.playwave3) {
 			sourceAudio.PlayOneShot(wave3, 1f);
-			GameManager.playwave3 = false;
+			L3Manager.playwave3 = false;
 		}
 
-		if (GameManager.playwave4) {
+		if (L4Manager.playwave4) {
 			sourceAudio.PlayOneShot(wave4, 1f);
-			GameManager.playwave4 = false;
+			L4Manager.playwave4 = false;
 		}
 	}
 

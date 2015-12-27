@@ -63,70 +63,70 @@ public class L2Manager : MonoBehaviour {
 		yield return new WaitForSeconds (2.5f);
 		
 		Vector2 pos1 = new Vector2 (6, -2.5f);
-		Instantiate (alien3, pos1, Quaternion.identity);
-		yield return new WaitForSeconds (2f);
+		Instantiate (alien1, pos1, Quaternion.identity);
+		yield return new WaitForSeconds (4f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos2 = new Vector2 (6, 2);
 		Instantiate (alien1, pos2, Quaternion.identity);
-		yield return new WaitForSeconds (1.75f);
+		yield return new WaitForSeconds (0.5f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos3 = new Vector2 (6, 2.5f);
-		Instantiate (alien1, pos3, Quaternion.identity);
+		Instantiate (alien4, pos3, Quaternion.identity);
 		yield return new WaitForSeconds (1f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos4 = new Vector2 (6.5f, 1.5f);
-		Instantiate (alien4, pos4, Quaternion.identity);
-		yield return new WaitForSeconds (1.8f);
+		Instantiate (alien2, pos4, Quaternion.identity);
+		yield return new WaitForSeconds (0.5f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos5 = new Vector2 (6, -2.5f);
 		Instantiate (alien1, pos5, Quaternion.identity);
-		yield return new WaitForSeconds (1.5f);
+		yield return new WaitForSeconds (1.6f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos6 = new Vector2 (6, -2.5f);
-		Instantiate (alien1, pos6, Quaternion.identity);
-		yield return new WaitForSeconds (1.4f);
+		Instantiate (alien3, pos6, Quaternion.identity);
+		yield return new WaitForSeconds (2f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos7 = new Vector2 (6, -2.5f);
-		Instantiate (alien1, pos7, Quaternion.identity);
+		Instantiate (alien3, pos7, Quaternion.identity);
 		yield return new WaitForSeconds (1f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos8 = new Vector2 (6, 1.75f);
-		Instantiate (alien1, pos8, Quaternion.identity);
-		yield return new WaitForSeconds (1.5f);
+		Instantiate (alien2, pos8, Quaternion.identity);
+		yield return new WaitForSeconds (2f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
-		Vector2 pos9 = new Vector2 (6.5f, 1.3f);
-		Instantiate (alien2, pos4, Quaternion.identity);
-		yield return new WaitForSeconds (1f);
+		Vector2 pos9 = new Vector2 (6.5f, -2.5f);
+		Instantiate (alien3, pos4, Quaternion.identity);
+		yield return new WaitForSeconds (3f);
 		
 		if (PowerUp3.clicked) 
 			yield return new WaitForSeconds (4f);
 		
 		Vector2 pos10 = new Vector2 (6, -2.5f);
-		Instantiate (alien1, pos5, Quaternion.identity);
+		Instantiate (alien4, pos5, Quaternion.identity);
 		//yield return new WaitForSeconds (1.5f)
 		
 	}
