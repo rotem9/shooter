@@ -17,6 +17,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip atomicbear;
 	public AudioClip enemy3dies;
 	public AudioClip enemy4dies;
+	public AudioClip endlevel;
 	
 	// Use this for initialization
 	void Start () {
@@ -85,6 +86,27 @@ public class SoundManager : MonoBehaviour {
 			sourceAudio.PlayOneShot(wave4, 1f);
 			L4Manager.playwave4 = false;
 		}
+
+		if (GameManager.playendlevel1) {
+			sourceAudio.PlayOneShot(endlevel, 1f);
+			GameManager.playendlevel1 = false;
+		}
+
+		if (L2Manager.playendlevel2) {
+			sourceAudio.PlayOneShot(endlevel, 1f);
+			L2Manager.playendlevel2= false;
+		}
+
+		if (L3Manager.playendlevel3) {
+			sourceAudio.PlayOneShot(endlevel, 1f);
+			L3Manager.playendlevel3= false;
+		}
+
+		if (L4Manager.playendlevel4) {
+			sourceAudio.PlayOneShot(endlevel, 1f);
+			L4Manager.playendlevel4= false;
+		}
+		
 	}
 
 }

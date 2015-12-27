@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	public static bool playwave2 = false;
 	public static bool playwave3 = false;
 	public static bool playwave4 = false;
+	public static bool playendlevel1;
 
     //public static int score = 0;
 	public static float counter = 4.0f;
@@ -135,6 +136,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
       	if (PlayerMovement.score == 9) {
 			PlayerMovement.score = 0;
+			playendlevel1 = true;
 			Instantiate(waveComplete, new Vector2(0,0), Quaternion.identity);
 			//PlayerMovement.score = 0;
 		}

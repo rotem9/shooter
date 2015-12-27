@@ -29,6 +29,7 @@ public class L3Manager : MonoBehaviour {
 	public static bool playwave2 = false;
 	public static bool playwave3 = false;
 	public static bool playwave4 = false;
+	public static bool playendlevel3;
 	
 	//	public static int score = 0;
 	public static float counter = 4.0f;
@@ -168,6 +169,7 @@ public class L3Manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (PlayerMovement.score == 16) {
+			playendlevel3 = true;
 			PlayerMovement.score = 0;
 			Instantiate(waveComplete, new Vector2(0,0), Quaternion.identity);
 		}
