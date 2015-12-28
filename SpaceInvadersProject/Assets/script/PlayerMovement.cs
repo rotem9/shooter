@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 	public static bool go = false;
 	public static bool wavecompletedcompleted = false;
 	public static int score = 0;
+	public float coolDownPeriodInSeconds = 0.3f;
+	private float timeStamp;
 	//public static bool playpowerupice;
 	
 	// Use this for initialization
@@ -41,25 +43,27 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (timeStamp <= Time.time) {
+			if ((PowerUp1.clicked == false) && (go == false) && (PowerUp2.press == false) && (PowerUp3.press == false) && Input.GetKeyDown (KeyCode.Mouse0)) {
+				PowerBar.PowerBarOn = true;
 
-		if ((PowerUp1.clicked == false) && (go == false) && (PowerUp2.press == false) && (PowerUp3.press == false) && Input.GetKeyDown (KeyCode.Mouse0)) {
-			PowerBar.PowerBarOn = true;
-
-			if (PowerUp2.clicked == false) {
-				anim.SetTrigger (aimHash);
-			} else {
-				anim.SetTrigger (special_aimHash);
-				specialActive = true;
+				if (PowerUp2.clicked == false) {
+					anim.SetTrigger (aimHash);
+				} else {
+					anim.SetTrigger (special_aimHash);
+					specialActive = true;
+				}
 			}
-		}
 		
-		if (Input.GetMouseButtonUp (0) && (go == false) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false)) {
-			playthrow = true;
-			//fire();
-			StartCoroutine (fireee ());
-			currPower = PowerBar.barDisplay;
-			PowerBar.PowerBarOn = false;
-			fired = false;
+			if (Input.GetMouseButtonUp (0) && (go == false) && (PowerUp1.clicked == false) && (PowerUp2.press == false) && (PowerUp3.press == false)) {
+				playthrow = true;
+				//fire();
+				StartCoroutine (fireee ());
+				currPower = PowerBar.barDisplay;
+				PowerBar.PowerBarOn = false;
+				fired = false;
+				timeStamp = Time.time + coolDownPeriodInSeconds;
+			}
 		}
 
 		if (PowerUp3.clicked == true) {
