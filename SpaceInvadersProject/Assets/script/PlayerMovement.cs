@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 			if (Snatched.level == 3)
 				Application.LoadLevel ("LevelFour");
 			if (Snatched.level == 4)  
-				Application.LoadLevel ("OpeningMenu");
+				Application.LoadLevel ("Credits");
 		}
 
 	}
